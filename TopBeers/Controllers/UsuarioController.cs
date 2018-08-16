@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TopBeers.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace TopBeers.Controllers
 {
@@ -14,22 +15,17 @@ namespace TopBeers.Controllers
             return View();
         }
 
-        //public IActionResult ValidarLogin(UsuarioModel usuario)
-        //{
-        //    if (login)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    } else
-        //    {
-        //        return RedirectToActio("Login", "Home");
-        //    }
-        //}
-
+        [HttpPost]
         public IActionResult ValidarLogin(UsuarioModel usuario)
         {
-            var user = usuario;
-
-            return RedirectToAction("Login", "Home");
+            bool login = usuario.ValidarLogin();
+            if (login)
+            {
+                return RedirectToAction("Index", "Home");
+            } else
+            {
+                return RedirectToAction("Cadastrar", "Home");
+            }
         }
     }
 }

@@ -31,7 +31,7 @@
                             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login<span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right mt-2">
                                 <li class="px-3 py-2">
-                                    @using (Html.BeginForm("ValidarLogin", "Usuario", FormMethod.Post))
+                                    @*using (Html.BeginForm("ValidarLogin", "Usuario", FormMethod.Post))
                                      {
                                         <div class="form-group">
                                             @Html.TextBoxFor(m => m.Email, new { @class= "form-control form-control-sm", @placeholder="morena@pedecana.com.br", required = "required" })
@@ -46,7 +46,7 @@
                                             <small>@Html.ActionLink("Esqueceu a senha?", "RecuperarSenha", "Home")</small>
                                             <small>@Html.ActionLink("Cadastrar", "Cadastrar", "Home")</small>
                                         </div>
-                                    }
+                                    }*@
                                 </li>
                             </ul>
                         </li>

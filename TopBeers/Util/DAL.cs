@@ -13,7 +13,7 @@ namespace TopBeers.Util
         private static string database = "topbeers";
         private static string user = "root";
         private static string password = "teibou12";
-        private string connectionString = $"Server={server};Database{database};Uid={user};Pwd={password}";
+        private string connectionString = $"Server={server};Database={database};Uid={user};Pwd={password}";
 
         private MySqlConnection connection;
 
